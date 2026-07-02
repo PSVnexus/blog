@@ -1,0 +1,161 @@
+{
+  "project_name": "Patrini Suryawanshi Portfolio",
+  "theme_and_archetype": {
+    "theme": "Light",
+    "archetype": "Archetype 3 (Pastel & Soft) mixed with Neo-Brutalist elements",
+    "description": "A playful, energetic, and tactile design. Uses raw structures (thick borders, hard shadows) paired with warm pastel backgrounds to feel like a creative student's interactive sketchbook, avoiding the sterile corporate look and avoiding all purple/violet AI gradients."
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "Outfit",
+      "mono": "JetBrains Mono"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl font-black tracking-tighter uppercase leading-none",
+      "h2": "text-4xl sm:text-5xl font-extrabold tracking-tight",
+      "h3": "text-2xl sm:text-3xl font-bold",
+      "body": "text-base sm:text-lg text-gray-800 leading-relaxed",
+      "labels": "text-xs font-mono uppercase tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F4F1EA",
+      "card": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#0A0A0A",
+      "secondary": "#4A4A4A"
+    },
+    "brand_accents": {
+      "primary": "#FF4A1C",
+      "secondary": "#2563EB",
+      "tertiary": "#FFD600",
+      "success": "#00C853"
+    },
+    "borders": {
+      "main": "#0A0A0A"
+    }
+  },
+  "design_system_rules": {
+    "surfaces": "Neo-brutalist style. Flat backgrounds with 2px solid black borders and hard black drop shadows (e.g., `shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`). Never use soft blurred shadows.",
+    "interactions": "Hover states should lift elements (`-translate-y-1` or `-translate-x-1`) and increase the hard shadow spread (`shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]`).",
+    "borders": "border-2 border-black for all major structural elements to create compartmentalization.",
+    "spacing": "Generous spacing. Use `p-8` to `p-12` inside bento grid cards to let content breathe.",
+    "icons": "Use Phosphor Icons (`@phosphor-icons/react`), specifically the `duotone` or `bold` weights for a punchy look."
+  },
+  "layout_strategy": {
+    "global": "Grid-breaking asymmetry combined with structural bento boxes. Mobile-first grid collapsing.",
+    "hero": "Massive typography taking up large portion of the viewport. Raw, uncluttered.",
+    "gallery": "Masonry or asymmetric grid (MODE A: 'TETRIS' GRID) mixing landscape and portrait placeholder slots."
+  },
+  "sections_and_content": [
+    {
+      "id": "hero",
+      "component": "HeroSection",
+      "layout": "Min-h-screen flex flex-col justify-center py-20",
+      "content": {
+        "tagline": "CS student building worlds in Unreal Engine, one pixel and one photograph at a time.",
+        "subtext": "Hi, I'm Patrini Suryawanshi. I mix code, 3D art, and photography."
+      },
+      "style": "Oversized H1 split into multiple lines. Add a playful floating element or rotating badge ('Available for Collab' in JetBrains Mono)."
+    },
+    {
+      "id": "about",
+      "component": "AboutBentoGrid",
+      "layout": "Bento Grid (grid-cols-1 md:grid-cols-3 gap-6 py-20)",
+      "content": {
+        "heading": "About Me",
+        "cards": [
+          {"title": "The Coder", "desc": "B.Tech CSE student passionate about clean logic and systems."},
+          {"title": "The Creator", "desc": "Certified Canva Designer & exploring 3D spaces in Blender."},
+          {"title": "The Observer", "desc": "Capturing street and landscape photography."}
+        ]
+      },
+      "style": "Cards with varying spans. Mix of accent colors for card backgrounds (e.g., one card yellow bg, one white, one blue)."
+    },
+    {
+      "id": "skills",
+      "component": "SkillsMarquee",
+      "layout": "Full width, border-t-2 border-b-2 border-black py-6 bg-[#FFD600]",
+      "content": {
+        "items": ["Unreal Engine", "Blender", "C++", "Photography", "Canva Design", "Game Dev", "UI/UX"]
+      },
+      "style": "Fast-moving marquee using `react-fast-marquee`. Huge uppercase mono text."
+    },
+    {
+      "id": "currently-exploring",
+      "component": "ActiveLearningSection",
+      "layout": "Two-column split (grid-cols-1 md:grid-cols-2) py-20 gap-12",
+      "content": {
+        "heading": "Currently Exploring",
+        "body": "Diving deep into Game Development with Unreal Engine. Always open to creative collaborations, game jams, or just geeking out over tech."
+      },
+      "style": "High energy layout. Use the neon game controller image here with a hard neo-brutalist shadow offset."
+    },
+    {
+      "id": "photography",
+      "component": "PhotoGallery",
+      "layout": "Asymmetric Tetris Grid py-20",
+      "content": {
+        "heading": "Through My Lens",
+        "categories": ["Landscapes", "Street", "Mixed"]
+      },
+      "style": "Images must have 2px black borders and hard shadow. Hover to reveal location/category tag."
+    },
+    {
+      "id": "contact",
+      "component": "FooterCTA",
+      "layout": "Massive padding (py-32). Center aligned.",
+      "content": {
+        "heading": "Let's Build Something",
+        "socials": [
+          {"name": "LinkedIn", "url": "https://www.linkedin.com/in/patrini-suryawanshi-08a719354"},
+          {"name": "GitHub", "url": "#"},
+          {"name": "Instagram", "url": "#"}
+        ]
+      },
+      "style": "Dark background (#0A0A0A) with white/neon accents to contrast the light theme above. Huge footer text."
+    }
+  ],
+  "media": {
+    "photography_placeholders": [
+      {
+        "url": "https://images.pexels.com/photos/14708922/pexels-photo-14708922.jpeg",
+        "category": "Landscape",
+        "alt": "Lake sunset"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000",
+        "category": "Street",
+        "alt": "Between buildings"
+      },
+      {
+        "url": "https://images.pexels.com/photos/18005167/pexels-photo-18005167.jpeg",
+        "category": "Landscape",
+        "alt": "Jordan sunset"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5842561/pexels-photo-5842561.jpeg",
+        "category": "Street",
+        "alt": "Chicago twilight"
+      }
+    ],
+    "tech_placeholders": [
+      {
+        "url": "https://images.pexels.com/photos/13930769/pexels-photo-13930769.jpeg",
+        "category": "Unreal Engine / Gaming",
+        "alt": "Neon game controller"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1636150721221-b88b3c2299be",
+        "category": "Blender / 3D",
+        "alt": "Abstract 3D sphere"
+      }
+    ]
+  },
+  "testing": {
+    "requirements": "All interactive elements (buttons, nav links, social icons, gallery items) MUST include a kebab-case `data-testid` attribute based on their role."
+  }
+}
